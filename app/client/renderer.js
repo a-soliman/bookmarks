@@ -9,4 +9,9 @@ class App {
     this.ui = ui;
     this.parser = parser;
   }
+
+  init() {
+    this.initEventListeners();
+    this.initBookmarks();
+  }
 }
