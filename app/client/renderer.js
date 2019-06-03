@@ -14,4 +14,24 @@ class App {
     this.initEventListeners();
     this.initBookmarks();
   }
+
+  initEventListeners() {
+    this.ui.selectors.newLinkUrl.addEventListener('keyup', () => {
+      this.ui.selectors.newLinkSubmit.disabled = !this.ui.selectors.newLinkUrl
+        .validity.valid;
+    });
+
+    this.ui.selectors.newLinkForm.addEventListener('submit', this.bookmark);
+    this.ui.selectors.clearStorageButton.addEventListener(
+      'click',
+      this.clearBookmarks
+    );
+    this.ui.selectors.linksSection.addEventListener('click', evt => {
+      debugger;
+      if (evt.target.href) {
+        evt.preventDefault();
+        shell.openExternal(evt.target.href);
+      }
+    });
+  }
 }
