@@ -34,4 +34,9 @@ class App {
       }
     });
   }
+
+  initBookmarks() {
+    const booksmarks = this.storage.get();
+    this.ui.displayBookmarks(booksmarks);
+  }
 }
