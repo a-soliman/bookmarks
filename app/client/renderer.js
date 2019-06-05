@@ -39,4 +39,18 @@ class App {
     const booksmarks = this.storage.get();
     this.ui.displayBookmarks(booksmarks);
   }
+
+  bookmark = async evt => {
+    evt.preventDefault();
+    this.ui.setLoading(true);
+    const url = this.ui.selectors.newLinkUrl.value;
+    const { title, error } = await this.parser.parse(url);
+    this.ui.clearForm();
+    this.ui.setLoading(false);
+
+    if (error) return this.ui.displayError(error);
+
+    this.storage.store(title, url);
+    this.ui.appendBookmark({ url, title });
+  };
 }
