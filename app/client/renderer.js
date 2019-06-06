@@ -53,4 +53,9 @@ class App {
     this.storage.store(title, url);
     this.ui.appendBookmark({ url, title });
   };
+
+  clearBookmarks = () => {
+    this.storage.clear();
+    this.ui.clearBookmarks();
+  };
 }
