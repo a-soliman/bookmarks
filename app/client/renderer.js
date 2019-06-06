@@ -59,3 +59,8 @@ class App {
     this.ui.clearBookmarks();
   };
 }
+
+(function() {
+  const app = new App(storage, parser, ui);
+  app.init();
+})();
