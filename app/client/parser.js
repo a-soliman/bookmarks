@@ -13,4 +13,9 @@ class Parser {
       return { error };
     }
   }
+
+  parseResponse(text) {
+    const domParser = new DOMParser();
+    return domParser.parseFromString(text, 'text/html');
+  }
 }
