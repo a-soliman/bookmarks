@@ -18,4 +18,8 @@ class Parser {
     const domParser = new DOMParser();
     return domParser.parseFromString(text, 'text/html');
   }
+
+  findTitle(nodes) {
+    return nodes.querySelector('title').innerText;
+  }
 }
