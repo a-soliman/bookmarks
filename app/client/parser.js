@@ -23,3 +23,6 @@ class Parser {
     return nodes.querySelector('title').innerText;
   }
 }
+
+const parser = new Parser();
+module.exports = parser;
