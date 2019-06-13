@@ -7,4 +7,9 @@ class Storage {
     this.STORE[url] = title;
     localStorage.setItem('store', JSON.stringify(this.STORE));
   }
+
+  delete(url) {
+    this.STORE = delete this.STORE[url];
+    localStorage.setItem('store', JSON.stringify(this.STORE));
+  }
 }
