@@ -12,4 +12,8 @@ class Storage {
     this.STORE = delete this.STORE[url];
     localStorage.setItem('store', JSON.stringify(this.STORE));
   }
+
+  fetch() {
+    return JSON.parse(this.STORE);
+  }
 }
