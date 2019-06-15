@@ -16,4 +16,8 @@ class Storage {
   fetch() {
     return JSON.parse(this.STORE);
   }
+
+  get() {
+    return JSON.parse(localStorage.getItem('store')) || {};
+  }
 }
