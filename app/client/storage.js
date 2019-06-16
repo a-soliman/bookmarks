@@ -20,4 +20,9 @@ class Storage {
   get() {
     return JSON.parse(localStorage.getItem('store')) || {};
   }
+
+  clear() {
+    this.STORE = {};
+    localStorage.setItem('store', JSON.stringify(this.STORE));
+  }
 }
