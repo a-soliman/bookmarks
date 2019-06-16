@@ -26,3 +26,7 @@ class Storage {
     localStorage.setItem('store', JSON.stringify(this.STORE));
   }
 }
+
+const storage = new Storage();
+
+module.exports = storage;
