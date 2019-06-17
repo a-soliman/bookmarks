@@ -9,4 +9,10 @@ class UI {
       clearStorageButton: document.querySelector('.clear-storage')
     };
   }
+
+  setLoading(bool) {
+    this.selectors.newLinkSubmit.setAttribute('disabled', bool);
+    if (bool) this.selectors.errorMessage.innerHTML = `<h4>Loading...</h4>`;
+    else this.selectors.errorMessage.innerHTML = null;
+  }
 }
