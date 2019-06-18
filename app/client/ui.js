@@ -15,4 +15,8 @@ class UI {
     if (bool) this.selectors.errorMessage.innerHTML = `<h4>Loading...</h4>`;
     else this.selectors.errorMessage.innerHTML = null;
   }
+
+  clearForm() {
+    this.selectors.newLinkUrl.value = '';
+  }
 }
