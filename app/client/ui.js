@@ -19,4 +19,11 @@ class UI {
   clearForm() {
     this.selectors.newLinkUrl.value = '';
   }
+
+  displayBookmarks(booksmarks) {
+    Object.keys(booksmarks).forEach(url => {
+      const title = booksmarks[url];
+      this.appendBookmark({ url, title });
+    });
+  }
 }
