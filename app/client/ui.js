@@ -26,4 +26,11 @@ class UI {
       this.appendBookmark({ url, title });
     });
   }
+
+  appendBookmark({ url, title }) {
+    const item = document.createElement('li');
+    item.className = 'bookmark';
+    item.innerHTML = `<a href="${url}" >${title}</a>`;
+    this.selectors.linksSection.appendChild(item);
+  }
 }
