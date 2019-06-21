@@ -33,4 +33,8 @@ class UI {
     item.innerHTML = `<a href="${url}" >${title}</a>`;
     this.selectors.linksSection.appendChild(item);
   }
+
+  clearBookmarks() {
+    this.selectors.linksSection.innerText = '';
+  }
 }
