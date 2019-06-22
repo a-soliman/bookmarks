@@ -37,4 +37,9 @@ class UI {
   clearBookmarks() {
     this.selectors.linksSection.innerText = '';
   }
+
+  displayError(err) {
+    this.selectors.errorMessage.innerText = err;
+    setTimeout(() => (this.selectors.errorMessage.innerText = null), 3000);
+  }
 }
