@@ -43,3 +43,6 @@ class UI {
     setTimeout(() => (this.selectors.errorMessage.innerText = null), 3000);
   }
 }
+
+const ui = new UI();
+module.exports = ui;
